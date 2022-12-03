@@ -1,0 +1,23 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{ 
+    Person p = ViewBag.person;
+}
+@if (p != null)
+{
+<h1 class="alert-success">id : @p.id </h1>
+<h2 class="alert-danger">first name : @p.first_name </h2>
+<h2 class="alert-danger">last name : @p.last_name </h2>
+<h3 class="alert-danger">email : @p.email </h3>
+<h3 class="alert-danger">date of birth : @p.date_birth </h3>
+<h3 class="alert-danger">image : @p.image </h3>
+<h3 class="alert-danger">country : @p.country </h3>
+}
+else {
+<h1>
+    Cet ID est invalide
+</h1>
+} 

@@ -1,0 +1,41 @@
+﻿
+<h1 class="alert-danger text-center">list of person </h1>
+<table class="table-bordered">
+    <thead>
+        <tr>
+            <th>
+                id
+            </th>
+            <th>
+                First name
+            </th>
+            <th>
+                Last name
+            </th>
+            <th>
+                email
+            </th>
+            <th>
+                Date of birth
+            </th>
+            <th>
+                image
+            </th>
+            <th>
+                country
+            </th>
+        </tr>
+    </thead>
+    @foreach (Person p in ViewBag.Person_List)
+    {
+<tr>
+    <th>@p.id</th>
+    <th>@p.first_name</th>
+    <th>@p.last_name</th>
+    <th>@p.email</th>
+    <th>@p.date_birth</th>
+    <th><a href="@p.image">@p.image</a></th>
+    <th>@p.country</th>
+</tr>
+    }
+</table>
